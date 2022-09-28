@@ -24,6 +24,26 @@
         content="Ishan Sharma ishandeveloper Ishan Inc. Chandigarh, India www.ishandeveloper.com .NET | ML | AI | Python | UI/UX | App Developer | Flutter | Web Developer" />
     <title>Contact | Ishan Sharma</title>
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <!-- Bootstrap date and time-->
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>  
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>  
+<script>  
+$(function() {  
+  $('#datetimepicker1').datetimepicker();  
+});  
+</script>  
+<link rel ="stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+<link rel ="stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">  
+<style>  
+    .container {  
+        margin-top: 5px;  
+        margin-left: 10px;  
+        width: 600px;  
+    }  
+</style>
 </head>
 
 <body id="contact-body" style="overflow-x: hidden;">
@@ -35,8 +55,6 @@
                 <div class="nav-items">
                     <ul>
                         <li><span><a href="about.html">About</a></span></li>
-                        <li><span><a href="work.html">Work</a></span></li>
-                        <li><span><a href="uses.html">Uses</a></span></li>
                         <li><span><a href="#" style="text-decoration: line-through;">Contact</a></span></li>
                     </ul>
                 </div>
@@ -49,32 +67,38 @@
                             class="fas fa-envelope"></i></a>
                 </p>
                 <form class="input-container" method="POST">
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="exampleFormControlInput1">Email address</label>
                     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                  </div>
+                  </div> -->
+                  <div class ="form-group">  
+                    <div class ='input-group date' id='datetimepicker1'>  
+                      <input type ='text' class="form-control" />  
+                      <span class ="input-group-addon">  
+                        <span class ="glyphicon glyphicon-calendar"></span>  
+                      </span>  
+                    </div>  
+                  </div> 
+                  <div class="form-group">   <label for="demo_overview">Select type of waste</label>
+                    <select class="custom-select" 
+                    style="width:150px;">
+                <option>solid waste</option>
+                <option>industrial waste</option>
+                <option>agricultural waste</option>
+                <option>hazardous waste</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="customFile">Upload the picture of waste</label>
+                <input type="file" class="form-control" id="customFile" />
+            </div>
+     <div class="form-group">
+        <label class="form-label">Enter the enter of waste</label>
+        <input class="form-control" type="text" placeholder="Default input">
+     </div>
+               
                   <div class="form-group">
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleFormControlSelect2">Example multiple select</label>
-                    <select multiple class="form-control" id="exampleFormControlSelect2">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Example textarea</label>
+                    <label for="exampleFormControlTextarea1">Any Message</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                   </div>
                 </form>
